@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.kewalkrishna.kewalsportfolio.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:background="#d8c446">
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,13 +20,15 @@
         android:text="Kewal&apos;s Nanodegree Apps!"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SPOTIFY STREAMER"
-        android:id="@+id/button-spotify"
+        android:id="@+id/button_spotify"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -38,19 +41,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SCORES APP"
-        android:id="@+id/button-scores"
-        android:layout_below="@+id/button-spotify"
+        android:id="@+id/button_scores"
+        android:layout_below="@+id/button_spotify"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button-spotify"
-        android:layout_alignEnd="@+id/button-spotify" />
+        android:layout_alignRight="@+id/button_spotify"
+        android:layout_alignEnd="@+id/button_spotify" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LIBRARY APP"
-        android:id="@+id/button-library"
-        android:layout_below="@+id/button-scores"
+        android:id="@+id/button_library"
+        android:layout_below="@+id/button_scores"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -60,19 +63,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BUILD IT BIGGER"
-        android:id="@+id/button-build"
-        android:layout_below="@+id/button-library"
+        android:id="@+id/button_build"
+        android:layout_below="@+id/button_library"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button-library"
-        android:layout_alignEnd="@+id/button-library" />
+        android:layout_alignRight="@+id/button_library"
+        android:layout_alignEnd="@+id/button_library" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="XYZREADER"
-        android:id="@+id/button-reader"
-        android:layout_below="@+id/button-build"
+        android:id="@+id/button_reader"
+        android:layout_below="@+id/button_build"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -82,21 +85,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CAPSTONE: My Own APP 1"
-        android:id="@+id/button-capstone1"
-        android:layout_below="@+id/button-reader"
+        android:id="@+id/button_capstone1"
+        android:layout_below="@+id/button_reader"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button-reader"
-        android:layout_alignEnd="@+id/button-reader" />
+        android:layout_alignRight="@+id/button_reader"
+        android:layout_alignEnd="@+id/button_reader" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CAPSTONE: MY OWN APP 2"
-        android:id="@+id/button-capstone2"
-        android:layout_below="@+id/button-capstone1"
+        android:id="@+id/button_capstone2"
+        android:layout_below="@+id/button_capstone1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button-capstone1"
-        android:layout_alignEnd="@+id/button-capstone1" />
+        android:layout_alignRight="@+id/button_capstone1"
+        android:layout_alignEnd="@+id/button_capstone1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Currently under development.Please come back Soon"
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button_capstone2"
+        android:layout_alignEnd="@+id/button_capstone2" />
 </RelativeLayout>

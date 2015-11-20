@@ -12,44 +12,44 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.content.Context;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         Button clickSpotify = (Button)findViewById(R.id.button_spotify);
-        clickSpotify.setOnClickListener((View.OnClickListener) this);
+        clickSpotify.setOnClickListener(this);
 
         Button clickScore = (Button)findViewById(R.id.button_scores);
-        clickScore.setOnClickListener((View.OnClickListener) this);
+        clickScore.setOnClickListener(this);
 
         Button clickLibrary = (Button)findViewById(R.id.button_library);
-        clickLibrary.setOnClickListener((View.OnClickListener) this);
+        clickLibrary.setOnClickListener(this);
 
         Button clickBuild = (Button)findViewById(R.id.button_build);
-        clickBuild.setOnClickListener((View.OnClickListener) this);
+        clickBuild.setOnClickListener(this);
 
         Button clickReader = (Button)findViewById(R.id.button_reader);
-        clickReader.setOnClickListener((View.OnClickListener) this);
+        clickReader.setOnClickListener(this);
 
         Button clickCapstone1 = (Button)findViewById(R.id.button_capstone1);
-        clickCapstone1.setOnClickListener((View.OnClickListener) this);
+        clickCapstone1.setOnClickListener(this);
 
         Button clickCapstone2 = (Button)findViewById(R.id.button_capstone2);
-        clickCapstone2.setOnClickListener((View.OnClickListener) this);
+        clickCapstone2.setOnClickListener(this);
     }
 
     @Override
@@ -74,11 +74,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
     public void onClick(View v) {
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
         Button b = (Button)v;
-        String text = b.getText().toString();
+        String text = "Checkout " + b.getText().toString();
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
